@@ -1,3 +1,4 @@
+//Reformat the ISO Date to AEST format
 function convertISODateToAEST(isoDate) {
     try {
         const event =  new Date(isoDate)

@@ -5,9 +5,9 @@ const sortRouter = require('./router/sort');
 const homeRouter = require('./router/home');
 
 
-app.use('/sort', sortRouter);
+app.use('/sort', sortRouter); //Router to "localhost:3000/sort"
 
-app.use('/', homeRouter);
+app.use('/', homeRouter); //Router to "localhost:3000"
 
 
 app.listen(port, () => {

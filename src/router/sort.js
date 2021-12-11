@@ -7,10 +7,11 @@ const sortEpisodes = require('../utilities/sort-episodes')
 const url = "https://www.nasa.gov/rss/dyn/Houston-We-Have-a-Podcast.rss";
 
 router.get('/', function (req, res, next) {
-    let order = -1;
+    let order = -1; // Set dsc by default
 
-    if (req.query.order == 'asc') order = 1;
-    if (req.query.order == 'dsc') order = -1;
+    if (req.query.order == 'asc') order = 1;    // If 'order' is 1, that will mean asc.
+
+    if (req.query.order == 'dsc') order = -1;   // If 'order' is -1, that will mean dsc.
 
     rssParser(url).then(response => res.send({
         title: "Houston We Have a Podcast",
