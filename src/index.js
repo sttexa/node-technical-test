@@ -21,8 +21,14 @@ const reformat=(items)=> {
 
 app.get('/', (req, res) => {
   //res.send('Hello World!')
-  rssParser(url).then(response => res.send(reformat(response.items)));
+  rssParser(url).then(response => res.send({
+    title: "Houston We Have a Podcast",
+    description: "description of podcast",
+    episodes:  reformat(response.items)
+} ));
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
