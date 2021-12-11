@@ -7,7 +7,7 @@ const url="https://www.nasa.gov/rss/dyn/Houston-We-Have-a-Podcast.rss";
 
 app.get('/', (req, res) => {
   //res.send('Hello World!')
-  console.log(rssParser(url))
+  rssParser(url).then(response => res.send(response));
 })
 
 app.listen(port, () => {
