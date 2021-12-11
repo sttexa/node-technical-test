@@ -1,10 +1,10 @@
-const sortEpisodes=(items)=>{
+const sortEpisodes=(items,order)=>{
     items.sort(function(a, b) {
         if (new Date(a.isoDate) < new Date(b.isoDate)) {
-            return -1;
+            return 0-order;
         }
         if (new Date(a.isoDate) >new Date(b.isoDate)) {
-            return 1;
+            return order;
         }
         return 0 ;
     });

@@ -10,8 +10,6 @@ app.use('/sort', sortRouter);
 app.use('/', homeRouter);
 
 
-
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
